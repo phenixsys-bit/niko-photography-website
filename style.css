@@ -70,7 +70,7 @@ nav a:hover { opacity: 1; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: right bottom;
 }
 .hero-shade {
   position: absolute;
@@ -180,9 +180,9 @@ h1 {
 .work img {
   height: 100%;
   object-fit: cover;
+  object-position: right bottom;
   transition: transform .7s cubic-bezier(.22,.61,.36,1), filter .3s ease;
 }
-.portrait-focus img { object-position: center 18%; }
 .work:hover img { transform: scale(1.025); filter: brightness(.88); }
 
 .services { padding-top: 32px; }
@@ -270,7 +270,7 @@ footer p:last-child { text-align: right; }
   color: #fff;
 }
 .case-hero > picture { position: absolute; inset: 0; }
-.case-hero > picture img { width: 100%; height: 100%; object-fit: cover; }
+.case-hero > picture img { width: 100%; height: 100%; object-fit: cover; object-position: right bottom; }
 .portrait-case-hero .hero-shade { background: linear-gradient(90deg, rgba(0,0,0,.72), rgba(0,0,0,.16) 58%, rgba(0,0,0,.08)); }
 .case-hero-content {
   position: absolute;
