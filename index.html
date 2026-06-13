@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Niko Photography 商业摄影作品集：会议活动、商业人像、酒店空间与商业视觉。">
   <title>Niko Photography</title>
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=3">
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -23,7 +23,10 @@
 
   <main id="top">
     <section class="hero" aria-labelledby="hero-title">
-      <img src="images/web/hero.webp" alt="Niko 拍摄的夜景建筑与空间" fetchpriority="high">
+      <picture>
+        <source media="(max-width: 800px)" srcset="images/web/hero-mobile.webp?v=2">
+        <img src="images/web/hero-desktop.webp?v=2" alt="Niko 拍摄的蓝调建筑夜景" fetchpriority="high">
+      </picture>
       <div class="hero-shade"></div>
       <div class="hero-content">
         <p class="eyebrow">Beijing · Available Worldwide</p>
@@ -107,7 +110,7 @@
           <button class="work work-wide"><img src="images/web/space-04.webp" alt="酒店夜景外观" loading="lazy"></button>
           <button class="work"><img src="images/web/space-05.webp" alt="酒店餐厅空间" loading="lazy"></button>
           <button class="work"><img src="images/web/space-06.webp" alt="酒店客房" loading="lazy"></button>
-          <button class="work work-wide"><img src="images/web/space-07.webp" alt="酒店建筑夜景" loading="lazy"></button>
+          <button class="work work-wide"><img src="images/web/space-07.webp?v=2" alt="蓝调商业建筑夜景" loading="lazy"></button>
           <button class="work"><img src="images/web/space-08.webp" alt="酒店建筑外观" loading="lazy"></button>
         </div>
       </article>
