@@ -24,10 +24,11 @@ const observer = new IntersectionObserver((entries) => {
 reveals.forEach((item) => observer.observe(item));
 
 const lightbox = document.querySelector(".lightbox");
-const lightboxImage = lightbox.querySelector("img");
+const lightboxImage = lightbox?.querySelector("img");
 
 document.querySelectorAll(".work").forEach((button) => {
   button.addEventListener("click", () => {
+    if (!lightbox || !lightboxImage) return;
     const image = button.querySelector("img");
     lightboxImage.src = image.src;
     lightboxImage.alt = image.alt;
@@ -35,7 +36,9 @@ document.querySelectorAll(".work").forEach((button) => {
   });
 });
 
-lightbox.querySelector(".lightbox-close").addEventListener("click", () => lightbox.close());
-lightbox.addEventListener("click", (event) => {
-  if (event.target === lightbox) lightbox.close();
-});
+if (lightbox) {
+  lightbox.querySelector(".lightbox-close").addEventListener("click", () => lightbox.close());
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) lightbox.close();
+  });
+}
